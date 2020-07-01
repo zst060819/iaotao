@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>变量的解构赋值</title>
+</head>
+
+<body>
+    <script>
+
+        // 2. 对象的解构
+        let guodegang = {
+            name: '郭德纲',
+            age: '不详',
+            xiangsheng: function(){
+                console.log("我可以说相声");
+            }
+        };
+        // let guodegang = {
+        //     name: '郭德纲',
+        //     age: '不详',
+        //     xiangsheng: function(){
+        //         console.log("我可以说相声");
+        //     }
+        // };
+
+        let wangfei = {
+            singer: '王菲',
+            songs: ['红豆','流年','暧昧'],
+            history: {
+                first: '窦唯',
+                second: '李亚鹏',
+                third: '谢霆锋'
+            }
+        };
+        // let wangfei = {
+        //     singer: '王菲',
+        //     songs: ['红豆','流年','暧昧'],
+        //     history: {
+        //         first: '窦唯',
+        //         second: '李亚鹏',
+        //         third: '谢霆锋'
+        //     }
+        // };
+        let {singer, songs:[a,b,c], history:{first,second, third}} = wangfei;
+        console.log(a,b,c);
+        console.log(first,second, third);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = [1,2,3,4,5,3,2,1];
+        //数组去重
+        let newArr = [...new Set(arr)];
+        console.log(newArr);
+
+        let arr2 = [3,4,5,5,4,3,6,2,8,7];
+        let inter = [...new Set(arr)].filter(function(item){
+            let s = new Set(arr2);
+            return s.has(item);
+        });
+        //简化写法
+        let inter = [...new Set(arr)].filter(item=>(new Set(arr2)).has(item));
+        //并集
+        let union = [...new Set([...arr,...arr2])];
+        console.log(union);
+    </script>
+</body>
+</html>

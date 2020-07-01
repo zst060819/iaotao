@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object.defineProperties</title>
+</head>
+<body>
+    <script>
+        var banji = {
+            name: 'H5200422',
+            scores:[
+                100,50,63,89,76,10
+            ]
+        };
+        Object.defineProperties(banji, {
+            total: {
+                value: 378,
+                writable:true,
+                configurable: true,
+                enumerable: true
+            },
+            avg: {
+                get: function(){
+                    var total = 0;
+                    this.scores.forEach(function(item){
+                        total += item;
+                    });
+                    var avg = total / this.scores.length;
+                    return avg;
+                }
+            }
+        });
+        console.log(banji.total);
+        console.log(banji.avg);
+    </script>
+</body>
+</html>

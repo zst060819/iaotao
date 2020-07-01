@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>箭头函数</title>
+</head>
+
+<body>
+    <script>
+        // let add = (a,b,c) => {
+        //     return a + b + c;
+        // };
+        let add = (a,b,c) => {
+            return a+b+c;
+        };
+        //2. 函数调用
+        let result = add(1,2,100);
+        console.log(result);
+
+        // 3. 不能使用 arguments 
+        let fn = () => {
+            console.log(arguments);
+        }
+        fn();
+
+        // let pingfang = x => {
+        //     return x * x;
+        // };
+
+        // let cheng =  (x) => {
+        //     return x * 100;
+        // }
+        let cheng = x => x * 100;
+        let res = cheng(0.02);
+        console.log(res);
+
+
+
+        
+
+
+    </script>
+</body>
+
+</html>

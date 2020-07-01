@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自定义遍历数据</title>
+</head>
+
+<body>
+    <script>
+        let banji = {
+            name: '三年二班',
+            stus:[
+                'xiaoming',
+                'xiaoning',
+                'knight',
+                'xiaotian'
+            ],
+        //     [Symbol.iterator]: function(){
+        //         let index = 0;
+        //         return {
+        //             next: () => {
+        //                 if(index < this.stus.length){
+        //                     let data = {value: this.stus[index], done: false};
+        //                     index++;
+        //                     return data;
+        //                 }else{
+        //                     return {value: undefined, done: true};
+        //                 }
+        //             }
+        //         };
+        //     }
+        // };
+        [Symbol.iterator]: function(){
+                let index = 0;
+                return {
+                    next: () => {
+                        if(index < this.stus.length){
+                            let data = {value: this.stus[index], done: false};
+                            index++;
+                            return data;
+                        }else{
+                            return {value: undefined, done: true};
+                        }
+                    }
+                };
+            }
+        };
+
+        for(let v of banji) {
+            console.log(v);
+        }
+    </script>
+</body>
+
+</html>

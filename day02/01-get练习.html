@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+        let ours = {
+            name:'H5200422',
+            stus: [
+                {name:'志强',score:98},
+                {name:'文娟',score:88},
+                {name:'田静',score:88},
+                {name:'王伟',score:96}
+            ]
+        };
+        //为对象添加属性
+        Object.defineProperties(ours,{
+           total:{
+               get:function(){
+                    let t = 0;
+                    this.stus.forEach(item => {
+                        t += item.score;
+                    });
+                    return t;
+               }
+           } ,
+           avg:function(){
+               return this.total / this.stus.length;
+           }
+        });
+        console.log(ours.total);
+        console.log(ours.avg);
+    </script> -->
+    <script>
+        let ours = {
+            name = 'BJ200422',
+            stus: [
+                {name:'志强',score:97},
+                {name:'志强',score:97},
+                {name:'志强',score:97},
+                {name:'志强',score:97},
+                {name:'志强',score:97},
+                {name:'志强',score:97},
+                {name:'志强',score:97}
+            ]
+        };
+        Object.defineProperties(ours,{
+            total:{
+                get:function(){
+                    let t = 0;
+                    this.stus.forEach(item => {
+                        t += item.score;
+                    });
+                    return t;
+                }
+            },
+            avg:{
+                get:function(){
+                    return this.total / this.stus.length;
+                }
+            }
+        });
+        console.log(ours.total);
+        console.log(ours.avg);
+    </script>
+</body>
+</html>
